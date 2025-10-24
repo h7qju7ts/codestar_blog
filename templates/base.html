@@ -3,7 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'account_login' as login_url %}
-{% url 'account_signup'as signup_url %}
+{% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
@@ -65,6 +65,7 @@
                         <a href="{% url 'account_login' %}" 
                         class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current = "page">Login</a>
                     </li>
+                    {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
                     adventures of a software developer
